@@ -47,7 +47,7 @@ FERRAMENTA PARA CONTROLE DE IMPORTAÇÕES
         +registration_date:timestamp
         +arrival_date:timestamp
         +description:string
-        +price:decimal{5,2}
+        +price:decimal
         +status:string
         +validation:boolean
         +solicitation:string
