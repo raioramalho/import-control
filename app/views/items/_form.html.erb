@@ -11,11 +11,11 @@
     </div>
   <% end %>
 
-  <!-- CODIGO DO ITEM
+  
   <div class="my-5">
     <%= form.label :code %>
-    <%= form.text_field :code, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div> -->
+    <%= form.text_field :code, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", value: (Item.last!.id + 1).to_s+'-' + Date.today.year.to_s %>
+  </div>
 
   <div class="my-5">
     <%= form.label :registration_date %>
