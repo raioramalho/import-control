@@ -43,15 +43,15 @@ FERRAMENTA PARA CONTROLE DE IMPORTAÇÕES
 *-IMPORTAÇÕES:
 
     *-Estrutura:
-        +código:string
-        +data de cadastro:timestamp
-        +data de chegada:timestamp
-        +item:string
-        +valor:decimal{5,2}
+        +code:string
+        +registration_date:timestamp
+        +arrival_date:timestamp
+        +description:string
+        +price:decimal{5,2}
         +status:string
-        +validação:boolean
-        +solicitação:string
-        +programado para:timestamp
+        +validation:boolean
+        +solicitation:string
+        +programmed_to:timestamp
 
 
 *-MAQUETE DO APP:
