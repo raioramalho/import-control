@@ -15,3 +15,4 @@ class CreateItems < ActiveRecord::Migration[7.0]
     end
   end
 end
+#rails g scaffold Item code:string registration_date:timestamp arrival_date:timestamp description:string price:decimal status:string validation:boolean solicitation:string programmed_to:timestamp
