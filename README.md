@@ -43,7 +43,7 @@
 *-IMPORTAÇÕES:
 
     *-Estrutura:
-        +código
+        +código:
         +data de cadastro:
         +data de chegada:
         +item:
@@ -51,7 +51,7 @@
         +status:
         +validação:
         +solicitação:
-        +programado para
+        +programado para:
 
 
 *-MAQUETE DO APP:
