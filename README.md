@@ -3,6 +3,7 @@
 *-FERRAMENTA PARA CONTROLE DE IMPORTAÇÕES
 
 *-SISTEMA DE LOGIN:
+
     *-Qual GEM utilizar?
         +Devise.
     *-Quais informações serão necessárias?
@@ -15,8 +16,9 @@
                 +Admin
                 +Gerente
                 +Funcionário
-                
+
 *-GERENCIAMENTO:
+
     *-Admin:
         +Todas as funções:
             -Quais?
@@ -39,6 +41,7 @@
 
 
 *-IMPORTAÇÕES:
+
     *-Estrutura:
         +código
         +data de cadastro:
@@ -52,6 +55,7 @@
 
 
 *-MAQUETE DO APP:
+
     *-PRINCIPAL:
         *-O que mostrar:
             +Compras Ativas:
