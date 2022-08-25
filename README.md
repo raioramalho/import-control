@@ -56,26 +56,26 @@ FERRAMENTA PARA CONTROLE DE IMPORTAÇÕES
 
 *-MAQUETE DO APP:
 
-    *-PRINCIPAL:
+    *-PRINCIPAL: index
         *-O que mostrar:
             +Compras Ativas:
             +Compras Programadas:
             +Calendário:
-    *-COMPRAS:
+    *-COMPRAS: imports
         *-O que mostrar:
             +código
             +data de chegada
             +item
             +valor total
             +status
-    *-PROGRAMAÇÃO:
+    *-PROGRAMAÇÃO: programmed
         *-O que mostrar:
             +código
             +programado para
             +item
             +valor total
             +status
-    *-CALENDÁRIO:
+    *-CALENDÁRIO: calendary
         *-O que mostrar:
             +calendário
             +pendencias        
