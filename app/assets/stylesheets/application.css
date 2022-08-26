@@ -15,5 +15,11 @@
  */
 
 #body {
-    background-color: lightgray;
+    background-color: whitesmoke;
+}
+
+.edit-icon {}
+
+.show-icon {
+    color: lightgreen;
 }
