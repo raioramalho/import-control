@@ -1,4 +1,5 @@
 <%= form_with(model: item, class: "contents") do |form| %>
+<div class="grid gap-4 mb-4 md:grid-cols-2">
   <% if item.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
@@ -56,8 +57,14 @@
     <%= form.label :programmed_to %>
     <%= form.datetime_field :programmed_to, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
+  </div>
   <br>
   <div class="inline">
     <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
+  
+  
 <% end %>
+
+
+

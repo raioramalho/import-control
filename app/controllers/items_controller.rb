@@ -6,10 +6,7 @@ class ItemsController < ApplicationController
     @items = Item.order(:id).page params[:page]
   end
 
-  def search
-    q = params[:description][:id]
-    @items = Item.find(:all, :conditions => ["description LIKE %?%",q])
-  end
+ 
 
   # GET /items/1 or /items/1.json
   def show
