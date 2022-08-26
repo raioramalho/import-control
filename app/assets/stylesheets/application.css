@@ -14,12 +14,24 @@
  *= require_self
  */
 
+#header {}
+
 #body {
     background-color: whitesmoke;
+}
+
+#footer {
+    bottom: 0;
+    position: flex;
+    width: 100%;
 }
 
 .edit-icon {}
 
 .show-icon {
     color: lightgreen;
+}
+
+.pagination {
+    align-items: center;
 }

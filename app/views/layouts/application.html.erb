@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <!-- <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script> -->
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script> 
 
     <%= stylesheet_link_tag "flowbite", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
@@ -28,6 +28,12 @@
     <%= render 'layouts/navbar' %>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
+      
     </main>
+    <div class="pagination"><center>
+      <%= render 'layouts/pagination'%>
+    </center></div>
+    <%= render 'layouts/footer' %>
   </body>
+  
 </html>
