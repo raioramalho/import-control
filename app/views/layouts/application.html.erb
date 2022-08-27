@@ -31,9 +31,11 @@
       <%= yield %>
       
     </main>
-    <div class="pagination"><center>
-     <%= render 'layouts/pagination'%>
-    </center></div>
+      <div class="pagination"> 
+        <center>
+        <%= paginate @items %>
+        </center>
+      </div>
     <%= render 'layouts/footer' %>
   </body>
   
