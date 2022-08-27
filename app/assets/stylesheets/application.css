@@ -43,3 +43,8 @@
     align-items: center;
     color: white;
 }
+
+.my-5 {
+    font-weight: bold;
+    color: black;
+}
