@@ -1,16 +1,58 @@
-<div class="mx-auto md:w-2/3 w-full flex">
-  <div class="mx-auto">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-    <% end %>
-
-    <%= render @item %>
-    <br>
-    <!-- <%= link_to 'Edit this item', edit_item_path(@item), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %> -->
-    <div class="inline-block ml-2">
-      <%= button_to 'Destroy this item', item_path(@item), method: :delete, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-    </div>
-    <%= link_to 'Back to items', items_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-  </div>
+<div class="mx-auto md:w-2/3 w-full ">
+<div class="mx-auto">
+   <% if notice.present? %>
+   <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+   <% end %>
+   <div id="items" class="">
+      <div id="">
+         <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                  <tr>
+                     <th scope="col" class="py-3 px-6">
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Code
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Description
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Registration
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Arrival
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Programmed
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Status
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Price
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Solicitation
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Edit
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Show
+                     </th>
+                  </tr>
+               </thead>
+               <%= render @item %>
+            </table>
+         </div>
+      </div>
+      <br></br>
+      <!-- <%= link_to 'Edit this item', edit_item_path(@item), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %> -->
+      <div class="inline-block ml-2">
+         <%= button_to 'Destroy this item', item_path(@item), method: :delete, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+      </div>
+      <%= link_to 'Back to items', items_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+   </div>
 </div>
 <br>

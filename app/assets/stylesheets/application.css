@@ -16,14 +16,21 @@
 
 #header {}
 
+#page-container {
+    position: relative;
+    min-height: 63vh;
+}
+
 #body {
     background-color: rgb(27, 39, 58);
 }
 
 #footer {
-    bottom: 0;
-    position: flex;
+    position: sticky;
     width: 100%;
+    flex-shrink: 0;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
 .edit-icon {}
@@ -32,6 +39,7 @@
     color: lightgreen;
 }
 
-.pagination {
+#pagination {
     align-items: center;
+    color: white;
 }
