@@ -14,24 +14,24 @@
       <%= form.label :code, class: "text-white" %>
       <%= form.text_field :code, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 ", value: Date.today.year.to_s, disabled: true%>
       <%= form.label :description, class: "text-white" %>
-      <%= form.text_field :description, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 " %>
+      <%= form.text_field :description, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
       <%= form.label :price, class: "text-white" %>
-      <%= form.text_field :price, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 " %>
+      <%= form.text_field :price, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
       <%= form.label :solicitation, class: "text-white" %>
-      <%= form.text_field :solicitation, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 " %>
+      <%= form.select :solicitation, ['X', 'Y', 'Z'], class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
       <br>
       <%= form.label :validation, class: "text-white" %>
       <%= form.check_box :validation, class: "block w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" %>
    </div>
    <div class="">
       <%= form.label :status, class: "text-white" %>
-      <%= form.text_field :status, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 " %>
+      <%= form.select :status, ['X', 'Y', 'Z'],class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
       <%= form.label :registration_date, class: "text-white" %>
-      <%= form.datetime_field :registration_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 " %>
+      <%= form.datetime_field :registration_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
       <%= form.label :arrival_date, class: "text-white" %>
-      <%= form.datetime_field :arrival_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 " %>
+      <%= form.datetime_field :arrival_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
       <%= form.label :programmed_to, class: "text-white" %>
-      <%= form.datetime_field :programmed_to, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 " %>
+      <%= form.datetime_field :programmed_to, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
    </div>
 </div>
 <br>
