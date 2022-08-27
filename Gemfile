@@ -8,6 +8,8 @@ gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 
 gem "devise"
 
+gem "rollbar"
+
 gem "kaminari"
 
 gem "pg", "~> 1.1", group: :production
