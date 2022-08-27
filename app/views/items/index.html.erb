@@ -12,7 +12,11 @@
   <div id="items" class="min-w-full">
     <%= render @items %>
     
-    <center><%= paginate @items %></center>
+    <div id="pagination">
+      <center>
+        <%= paginate @items %>
+      </center>
+    </div>
           
   </div>
 </div>
