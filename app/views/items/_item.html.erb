@@ -1,146 +1,53 @@
-<!-- <div id="<%= dom_id item %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Code:</strong>
-    <%= item.code %>
-    
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Registration date:</strong>
-    <%= item.registration_date %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Arrival date:</strong>
-    <%= item.arrival_date %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Description:</strong>
-    <%= item.description %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Price:</strong>
-    <%= item.price %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Status:</strong>
-    <%= item.status %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Validation:</strong>
-    <%= item.validation %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Solicitation:</strong>
-    <%= item.solicitation %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Programmed to:</strong>
-    <%= item.programmed_to %>
-  </p>
-  <br>
-
-  <% if action_name != "show" %>
-    <%= link_to "Show this item", item, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this item', edit_item_path(item), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
-</div> -->
-
-
-<div id="<%= dom_id item %>">
-<div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" class="py-3 px-6">
-                                       
-                </th>
-                <th scope="col" class="py-3 px-6">
-                    Code
-                </th>
-                <th scope="col" class="py-3 px-6">
-                    Description
-                </th>
-                <th scope="col" class="py-3 px-6">
-                    Registration
-                </th>
-                <th scope="col" class="py-3 px-6">
-                    Arrival
-                </th>
-                <th scope="col" class="py-3 px-6">
-                    Programmed
-                </th>
-                <th scope="col" class="py-3 px-6">
-                    Status
-                </th>
-                <th scope="col" class="py-3 px-6">
-                    Price
-                </th>
-                <th scope="col" class="py-3 px-6">
-                    Solicitation
-                </th>
-                <th scope="col" class="py-3 px-6">
-                    Edit
-                </th>
-                <th scope="col" class="py-3 px-6">
-                    Show
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <td class="p-4 w-4">
-                    <div class="flex items-center">
-                        <% if item.validation != true %>
-                          <input id="checkbox-table-search-1" type="checkbox" disabled="true" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <% else %>
-                          <input checked id="checkbox-table-search-1" type="checkbox" disabled="true" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <% end %>
-                        
-                        <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                    </div>
-                </td>
-                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    <%= item.id.to_s+'-'+item.code.to_s %>
-                </th>
-                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    <%= item.description %>
-                </th>
-                <td class="py-4 px-6">
-                    <%= item.registration_date.strftime("%d/%m/%Y") %>
-                </td>
-                <td class="py-4 px-6">
-                    <%= item.arrival_date.strftime("%d/%m/%Y") %>
-                </td>
-                <td class="py-4 px-6">
-                    
-                    <%= item.programmed_to.strftime("%d/%m/%Y") %>
-                </td>
-                <td class="py-4 px-6">
-                    <%= item.status%>
-                </td>
-                <td class="py-4 px-6">
-                    <%= item.price %>
-                </td>
-                <td class="py-4 px-6">
-                    <%= item.solicitation %>
-                </td>
-                <td class="items-center py-4 px-6 space-x-3">
-                    <a class="edit-icon" href="<%= edit_item_path(item) %>"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg></a>
-                </td>
-                <td class="items-center py-4 px-6 space-x-3">
-                    <a class="show-icon" href="<%= "items/"+item.id.to_s %>"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg></a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-</div>
-<br>
+<tbody>
+   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+      <td class="p-4 w-4">
+         <div class="flex items-center">
+            <% if item.validation != true %>
+            <input id="checkbox-table-search-1" type="checkbox" disabled="true" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <% else %>
+            <input checked id="checkbox-table-search-1" type="checkbox" disabled="true" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <% end %>
+            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+         </div>
+      </td>
+      <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+         <%= item.id.to_s+'-'+item.code.to_s %>
+      </th>
+      <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+         <%= item.description %>
+      </th>
+      <td class="py-4 px-6">
+         <%= item.registration_date.strftime("%d/%m/%Y") %>
+      </td>
+      <td class="py-4 px-6">
+         <%= item.arrival_date.strftime("%d/%m/%Y") %>
+      </td>
+      <td class="py-4 px-6">
+         <%= item.programmed_to.strftime("%d/%m/%Y") %>
+      </td>
+      <td class="py-4 px-6">
+         <%= item.status%>
+      </td>
+      <td class="py-4 px-6">
+         <%= item.price %>
+      </td>
+      <td class="py-4 px-6">
+         <%= item.solicitation %>
+      </td>
+      <td class="items-center py-4 px-6 space-x-3">
+         <a class="edit-icon" href="<%= edit_item_path(item) %>">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+            </svg>
+         </a>
+      </td>
+      <td class="items-center py-4 px-6 space-x-3">
+         <a class="show-icon" href="<%= "items/"+item.id.to_s %>">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+         </a>
+      </td>
+   </tr>
+</tbody>
