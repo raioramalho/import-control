@@ -1,20 +1,63 @@
 <div class="w-full">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
+   <% if notice.present? %>
+   <p class=" px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+   <% end %>
+   <div class="flex justify-between items-center">
+      <h1 class="self-center text-xl font-semibold text-4xl"></h1>
+   </div>
+   <br>
+   <div id="items" class="">
+      <div id="">
+         <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                  <tr>
+                     <th scope="col" class="py-3 px-6">
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Code
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Description
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Registration
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Arrival
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Programmed
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Status
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Price
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Solicitation
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Edit
+                     </th>
+                     <th scope="col" class="py-3 px-6">
+                        Show
+                     </th>
+                  </tr>
+               </thead>
 
-  <div class="flex justify-between items-center">
-    <h1 class="self-center text-xl font-semibold whitespace-nowrap text-4xl">IMPORTS:</h1>
-    <%= link_to 'New item', new_item_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-    
-  </div>
-  <br>
-
-  <div id="items" class="min-w-full">
-    <%= render @items %>
-    
-          
-  </div>
+               <%= render @items %>
+               
+            </table>
+         </div>
+      </div>
+      <br></br>
+      <div id="pagination">
+         <center>
+            Listing: <%= @items.all.count%> Item(s)
+            <%= paginate @items %>
+         </center>
+      </div>
+   </div>
 </div>
-
-

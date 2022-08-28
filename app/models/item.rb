@@ -1,4 +1,4 @@
 class Item < ApplicationRecord
-    paginates_per 6
+    paginates_per 7
     
 end
