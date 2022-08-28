@@ -43,3 +43,8 @@
     align-items: center;
     color: white;
 }
+
+#login-card{
+    width: 400px;
+    height: auto;
+}
