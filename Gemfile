@@ -16,7 +16,7 @@ gem "pg", "~> 1.1", group: :production
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-
+gem "rspec", "~> 3.11.0", group: :development
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
