@@ -1,3 +1,4 @@
+<div class="block p-6  bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
 <%= form_with(model: item, class: "contents") do |form| %>
 <div class="grid gap-4 mb-4 md:grid-cols-2">
    <% if item.errors.any? %>
@@ -38,4 +39,5 @@
 <div class="inline">
    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
 </div>
+
 <% end %>
