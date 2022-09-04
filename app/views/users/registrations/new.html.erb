@@ -1,5 +1,5 @@
 
-<div id="ding_up-card" class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+<div id="sing_up-card" class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
@@ -9,7 +9,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" %>
+    <%= f.label :password, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"%>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters )</em>
     <% end %><br />
