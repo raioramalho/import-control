@@ -21,11 +21,14 @@
     min-height: 63vh;
 }
 
-#body {
+body {
     background-color: rgb(27, 39, 58);
+    background-image: url("/geometric-lines.png");    
+    background-size: cover;
 }
 
-#footer {
+
+footer {
     position: sticky;
     width: 100%;
     flex-shrink: 0;
@@ -46,5 +49,10 @@
 
 #login-card{
     width: 400px;
+    height: auto;
+}
+
+#sing_up-card{
+    
     height: auto;
 }
