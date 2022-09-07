@@ -19,11 +19,11 @@
           document.documentElement.classList.remove('dark')
       }
    </script>
-   <body id="body">
+   <body>
       <%= render 'layouts/navbar' %>
-      <main id="page-container" class="container mx-auto mt-10 px-5 ">
-         <%= yield %>
-      </main>
+      
+      <main class="container mx-auto mt-10 px-5"><%= yield %></main>
+
       <%= render 'layouts/footer' %>
    </body>
 </html>
