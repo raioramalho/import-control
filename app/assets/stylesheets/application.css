@@ -23,7 +23,7 @@ nav {
 
 body {
     background-color: rgb(27, 39, 58);
-    background-image: url("/geometric-lines.png");    
+    background-image: url("/geometric-lines.png");
 }
 
 body * {
@@ -57,6 +57,7 @@ footer {
     width: auto;
     height: auto;
     padding: 25px 25px;
+    box-sizing: border-box;
 }
 
 #sing_up-card{
@@ -64,3 +65,26 @@ footer {
     height: auto;
     padding: 25px 25px;
 }
+
+#login-container{
+    padding: 25px 25px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.login-signup{
+    border: solid 2px;
+    padding: 15px 15px;
+    width: 35vh;
+    box-sizing: border-box;
+}
+
+.left-card{
+    padding: 25px 25px;
+    width: auto;
+}
+
+@media (max-width: 767px) { #left-card{
+    display: none;
+}}
