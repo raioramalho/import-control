@@ -60,11 +60,7 @@ footer {
     box-sizing: border-box;
 }
 
-#sing_up-card{
-    width: auto;
-    height: auto;
-    padding: 25px 25px;
-}
+
 
 #login-container{
     padding: 25px 25px;
@@ -73,7 +69,7 @@ footer {
     box-sizing: border-box;
 }
 
-.login-signup{
+.login-box{
     border: solid 2px;
     padding: 15px 15px;
     width: 35vh;

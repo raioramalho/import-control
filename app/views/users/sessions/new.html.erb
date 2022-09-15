@@ -5,7 +5,7 @@
          <br>
          <%= link_to "Create your account", new_registration_path(resource_name), class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>
       </div>
-      <div class="login-signup rounded-lg dark:border-gray-700 shadow-md dark:bg-gray-800">
+      <div class="login-box rounded-lg dark:border-gray-700 shadow-md dark:bg-gray-800">
          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="field mb-6">
                <%= f.label :email, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"%>
