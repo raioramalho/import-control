@@ -4,16 +4,18 @@ class ItemsController < ApplicationController
 
   # GET /items or /items.json
   def index
-    @items = Item.order(:id).page params[:page]
+    @currentUserId = current_user.id
+    @items = Item.where(user_id: @currentUserId).order(:id).page params[:page]
+   #@items = Item.order(:id).page params[:page]
   end
 
- 
+
 
   # GET /items/1 or /items/1.json
   def show
   end
 
-  
+
 
   # GET /items/new
   def new
@@ -70,7 +72,7 @@ class ItemsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def item_params
-      params.require(:item).permit(:code ,:registration_date, :arrival_date, :description, :price, :status, :solicitation, :validation, :programmed_to)
+      params.require(:item).permit(:user_id, :code ,:registration_date, :arrival_date, :description, :price, :status, :solicitation, :validation, :programmed_to)
     end
 
 end

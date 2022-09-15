@@ -11,6 +11,7 @@ class CreateItems < ActiveRecord::Migration[7.0]
       t.string :solicitation
       t.timestamp :programmed_to
 
+
       t.timestamps
     end
   end
