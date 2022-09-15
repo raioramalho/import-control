@@ -12,6 +12,10 @@
    </div>
    <% end %>
    <div class="">
+      <div id="user_id">
+      <%= form.label :user_id, 'user_id' %>
+      <%= form.text_field :user_id, value: current_user.id %>
+      </div>
       <%= form.label :code, class: "text-white" %>
       <%= form.text_field :code, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 ", value: Date.today.year.to_s, disabled: true%>
       <%= form.label :description, class: "text-white" %>
