@@ -84,3 +84,8 @@ footer {
 @media (max-width: 767px) { #left-card{
     display: none;
 }}
+
+
+#user_id{
+    display: none;
+}
