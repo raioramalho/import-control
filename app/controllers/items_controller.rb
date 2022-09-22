@@ -6,16 +6,17 @@ class ItemsController < ApplicationController
   # GET /items or /items.json
   def index
     @currentUserId = current_user.id
-    @items = Item.where(user_id: @currentUserId).order(:id).page params[:page]
-   #@items = Item.order(:id).page params[:page]
+    if @currentUserId != 1
+      @items = Item.where(user_id: @currentUserId).order(:id).page params[:page]
+    else
+      @items = Item.order(:id).page params[:page]
+    end
   end
-
 
 
   # GET /items/1 or /items/1.json
   def show
   end
-
 
 
   # GET /items/new
