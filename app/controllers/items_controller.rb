@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_item, only: %i[ show edit update destroy ]
 
+  # Def userid variable
   # GET /items or /items.json
   def index
     @currentUserId = current_user.id
@@ -29,7 +30,6 @@ class ItemsController < ApplicationController
   # POST /items or /items.json
   def create
     @item = Item.new(item_params)
-
     respond_to do |format|
       if @item.save
         format.html { redirect_to item_url(@item), notice: "Item was successfully created." }
@@ -72,7 +72,7 @@ class ItemsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def item_params
-      params.require(:item).permit(:user_id, :code, :registration_date, :arrival_date, :description, :price, :status, :solicitation, :validation, :programmed_to)
+      params.require(:item).permit(:code, :registration_date, :arrival_date, :description, :price, :status, :solicitation, :validation, :programmed_to).merge!(:user_id => current_user.id)
     end
 
 end
